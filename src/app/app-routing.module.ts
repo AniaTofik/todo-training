@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { ContactPageModule } from './pages/contact.page-module';
 import { ProjectsPageModule } from './pages/projects.page-module';
+import { HomePageModule } from './pages/home.page-module';
 
 const routes: Routes = [
   {
@@ -13,10 +14,14 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => ContactPageModule,
   },
-  { 
-        path: '', 
-        loadChildren: () => ProjectsPageModule
-      }
+  {
+    path: 'projects',
+    loadChildren: () => ProjectsPageModule,
+  },
+  {
+    path: 'home',
+    loadChildren: () => HomePageModule,
+  },
 ];
 
 @NgModule({
