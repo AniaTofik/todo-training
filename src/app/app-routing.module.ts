@@ -19,7 +19,7 @@ const routes: Routes = [
     loadChildren: () => ProjectsPageModule,
   },
   {
-    path: 'home',
+    path: '',
     loadChildren: () => HomePageModule,
   },
 ];
