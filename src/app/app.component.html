@@ -1,31 +1,28 @@
-<div class="continer">
+<div class="container-fluid m-0 p-0 vh-15">
   <router-outlet>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
-      <div class="container-fluid">
-        <a class="navbar-brand" href=""><span class="text-primary fs-3 fw-bold">D</span>ream<span
-            class="text-primary fs-3 fw-bold">W</span>ork</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-center w-100" id="navbarNav">
-          <ul class="navbar-nav text-uppercase">
-            <li class="nav-item">
-              <a class="nav-link text-white ms-5" aria-current="page" href="">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white ms-3" href="onas">O nas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white ms-3" href="projects">Nasza oferta</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white ms-3" href="contact">Kontakt</a>
-            </li>
-          </ul>
+    <section class="d-flex flex-column vh-10">
+      <nav class="navbar navbar-expand-lg bg-dark px-5 text-light">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light text-lowercase" href=""><span
+              class="text-primary text-uppercase fs-3 fw-bold">D</span>ream<span
+              class="text-primary text-uppercase fs-3 fw-bold">W</span>ork</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-light d-block fs-3"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-uppercase">
+              <a class="nav-link active text-light" aria-current="page" href="">Home</a>
+              <a class="nav-link text-light" href="onas">O nas</a>
+              <a class="nav-link text-light" href="pracownik">Praca</a>
+              <a class="nav-link text-light">Kontakt</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
-
+      </nav>
+    </section>
   </router-outlet>
+  <!-- <footer class="bg-dark text-light d-flex justify-content-center align-items-center">
+    <p>Copyright &2022</p>
+  </footer> -->
 </div>
