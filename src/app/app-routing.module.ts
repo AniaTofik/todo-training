@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { ContactPageModule } from './pages/contact.page-module';
 import { HomePageModule } from './pages/home.page-module';
-import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
-
+import { WorkPageModule } from './pages/work.page-module';
+import { EmployeesPageModule } from './pages/employees.page-module';
 
 const routes: Routes = [
   {
@@ -20,12 +20,8 @@ const routes: Routes = [
     loadChildren: () => HomePageModule,
   },
   {
-    path: 'pracownik/:Anna Kiedel',
-    loadChildren: () => EmployeeDetailsPageModule,
-  },
-  {
-    path: 'pracownik',
-    loadChildren: () => EmployeeDetailsPageModule,
+    path: 'work',
+    loadChildren: () => WorkPageModule,
   },
 ];
 
