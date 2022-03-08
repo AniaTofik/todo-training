@@ -5,6 +5,7 @@ import { ContactPageModule } from './pages/contact.page-module';
 import { HomePageModule } from './pages/home.page-module';
 import { WorkPageModule } from './pages/work.page-module';
 import { EmployeesPageModule } from './pages/employees.page-module';
+import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
 
 const routes: Routes = [
   {
@@ -23,6 +24,14 @@ const routes: Routes = [
     path: 'work',
     loadChildren: () => WorkPageModule,
   },
+  { 
+        path: 'pracownik', 
+        loadChildren: () => EmployeesPageModule
+      },
+  { 
+        path: 'pracownik/:name', 
+        loadChildren: () => EmployeeDetailsPageModule
+      }
 ];
 
 @NgModule({
