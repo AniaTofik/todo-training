@@ -1,0 +1,54 @@
+<div>
+</div>
+<section class="aboutus bg-light">
+  <h2 class="py-4 text-center text-uppercase">Poznaj nasz zespół!</h2>
+  <div class="container px-sm-0 px-lg-3">
+    <div class="row card-group m-0">
+      <div class="card col-sm-6 me-sm-3 me-md-4 me-lg-5 bg-secondary p-3 mb-4" style="--bs-bg-opacity: .2;">
+        <img src="https://cdn.pixabay.com/photo/2019/12/17/17/09/woman-4702060_960_720.jpg" class="card-img-top"
+          alt="zdjęcie Agnieszki Woźniak">
+        <div class="card-body text-center pt-4">
+          <h5 class="text-uppercase">Agnieszka Woźniak</h5>
+          <h6 class="card-title fw-bold">Kierownik ds. Obsługi Klienta</h6>
+          <p class="card-text text-start">This is a wider card with supporting text below as a natural lead-in to
+            additional
+            content.
+            This content is a little bit longer.</p>
+        </div>
+      </div>
+      <div class="card col-sm-6 bg-secondary p-3 mb-4 me-sm-3 me-md-4 me-lg-5" style="--bs-bg-opacity:.2;">
+        <img src="https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419_960_720.jpg" class="card-img-top"
+          alt="zdjęcie Karola Balickiego">
+        <div class="card-body text-center pt-4">
+          <h5 class="text-uppercase">Karol Balicki</h5>
+          <h6 class="card-title fw-bold">Kierownik Działu Kadr</h6>
+          <p class="card-text text-start">This card has supporting text below as a natural lead-in to additional
+            content.</p>
+        </div>
+      </div>
+      <div class="card bg-secondary col-sm-12 p-3 mb-4" style="--bs-bg-opacity: .2;">
+        <img src="https://cdn.pixabay.com/photo/2018/01/04/21/15/young-3061652_960_720.jpg" class="card-img-top"
+          alt="zdjęcie Joanny Zawady">
+        <div class="card-body text-center pt-4">
+          <h5 class="text-uppercase">Joanna Zawada</h5>
+          <h6 class="card-title fw-bold">Administrator Bazy Danych
+          </h6>
+          <p class="card-text text-start">This is a wider card with supporting text below as a natural lead-in to
+            additional
+            content.
+            This card has even longer content than the first to show that equal height action.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="bg-dark text-light">
+  <ul>
+    <li *ngFor="let employee of dane$ |async">
+      {{ employee.name }}
+      <img [src]="employee.imageUrl">
+    </li>
+  </ul>
+</div>
