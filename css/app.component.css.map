@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../src/app/app.component.scss"
+        "../todo-training/src/app/app.component.scss"
     ],
     "names": [],
     "file": "app.component.css"
