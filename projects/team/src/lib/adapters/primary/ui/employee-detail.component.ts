@@ -13,6 +13,5 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EmployeeDetailComponent {
   name$ = this.url.params;
-  // constructor(private _activatedRoute: ActivatedRoute) {}
   constructor(private url: ActivatedRoute) {}
 }

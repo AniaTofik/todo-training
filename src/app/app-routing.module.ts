@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { HomePageModule } from './pages/home.page-module';
-import { WorkPageModule } from './pages/work.page-module';
 import { EmployeesPageModule } from './pages/employees.page-module';
 import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
 import { ContactUsPageModule } from './pages/contact-us.page-module';
@@ -15,10 +14,6 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => HomePageModule,
-  },
-  {
-    path: 'work',
-    loadChildren: () => WorkPageModule,
   },
   {
     path: 'pracownik',
