@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ContactPage } from './contact.page';
+import { ContactUsPage } from './contact-us.page';
 import { ContactFormComponentModule } from '../../../projects/messages/src/lib/adapters/primary/ui/contact-form.component-module';
 
 @NgModule({
@@ -9,14 +9,14 @@ import { ContactFormComponentModule } from '../../../projects/messages/src/lib/a
     CommonModule,
     RouterModule.forChild([
       {
-        path: 'contact',
-        component: ContactPage,
+        path: '',
+        component: ContactUsPage,
       },
     ]),
     ContactFormComponentModule
   ],
-  declarations: [ContactPage],
+  declarations: [ContactUsPage],
   providers: [],
   exports: [],
 })
-export class ContactPageModule {}
+export class ContactUsPageModule {}

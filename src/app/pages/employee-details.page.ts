@@ -13,6 +13,7 @@ import { ActivatedRoute } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeDetailsPage {
-  params$ = this._activatedRoute.params;
-  constructor(private _activatedRoute: ActivatedRoute) {}
+  name$ = this.url.params;
+  // constructor(private _activatedRoute: ActivatedRoute) {}
+  constructor(private url: ActivatedRoute) {}
 }
