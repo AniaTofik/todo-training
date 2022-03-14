@@ -1,1 +1,4 @@
 <h2 class="text-center text-uppercase py-4">Formularz kontaktowy</h2>
+<form (ngSubmit)="onFormSubmited(messagesForm)" [formGroup]="messagesForm"><input type="text" formControlName="email"
+    placeholder="Email" class="m-2"><br><input type="text" formControlName="text" placeholder="Text"><br><input
+    type="submit" value="Submit" class="m-4"></form>

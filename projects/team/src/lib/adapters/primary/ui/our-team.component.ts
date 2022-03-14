@@ -37,15 +37,27 @@ export class OurTeamComponent {
       imageUrl:
         'https://cdn.pixabay.com/photo/2018/01/04/21/15/young-3061652_960_720.jpg',
       routerLink: '/pracownik/joannazawada',
-      text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.',
+      text: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
       position: 'Administrator Bazy Danych',
       alt: 'Zdjęcie Joanny Zawady',
     },
   ]);
-  employee: EmployeeDTO = {
-    id: '',
-    name: '',
-    imageUrl: '',
-    bio: '',
-  };
+  // employee: EmployeeDTO = {
+  //   id: '',
+  //   name: '',
+  //   imageUrl: '',
+  //   bio: '',
+  // };
+  // employee2: EmployeeDTO = {
+  //   id: '',
+  //   name: '',
+  //   imageUrl: '',
+  //   bio: '',
+  // };
+  // employee3: EmployeeDTO = {
+  //   id: '',
+  //   name: '',
+  //   imageUrl: '',
+  //   bio: '',
+  // };
 }

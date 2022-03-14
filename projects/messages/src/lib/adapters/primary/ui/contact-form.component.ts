@@ -3,6 +3,7 @@ import {
   ViewEncapsulation,
   ChangeDetectionStrategy,
 } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'lib-contact-form',
@@ -10,4 +11,16 @@ import {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactFormComponent {}
+export class ContactFormComponent {
+  readonly messagesForm: FormGroup = new FormGroup({
+    email: new FormControl(),
+    text: new FormControl(),
+  });
+  onFormSubmited(messagesForm: FormGroup): void {
+    console.log(messagesForm.getRawValue());
+    alert((
+        `text:${messagesForm.value.email}, email:${messagesForm.value.text}`
+      )
+    );
+  }
+}
