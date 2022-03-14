@@ -4,6 +4,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { of } from 'rxjs';
+import { EmployeeDTO } from '../../../application/ports/secondary/employee.dto';
 
 @Component({
   selector: 'lib-our-team',
@@ -41,4 +42,10 @@ export class OurTeamComponent {
       alt: 'Zdjęcie Joanny Zawady',
     },
   ]);
+  employee: EmployeeDTO = {
+    id: '',
+    name: '',
+    imageUrl: '',
+    bio: '',
+  };
 }
