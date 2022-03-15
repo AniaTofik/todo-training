@@ -15,9 +15,9 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "messages": ["dist/messages/messages", "dist/messages"],
-      "@messages": ["projects/messages/src/public-api.ts"],
+      "@messages": ["projects/messages/src/index.ts"],
       "team": ["dist/team/team", "dist/team"],
-      "@team": ["projects/team/src/public-api.ts"]
+      "@team": ["projects/team/src/index.ts"]
     }
   },
   "angularCompilerOptions": {
