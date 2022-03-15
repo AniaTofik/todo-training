@@ -12,21 +12,12 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "paths": {
-      "messages": [
-        "dist/messages/messages",
-        "dist/messages",
-        "dist/messages/messages",
-        "dist/messages"
-      ],
-      "team": [
-        "dist/team/team",
-        "dist/team"
-      ]
+      "messages": ["dist/messages/messages", "dist/messages"],
+      "@messages": ["projects/messages/src/public-api.ts"],
+      "team": ["dist/team/team", "dist/team"],
+      "@team": ["projects/team/src/public-api.ts"]
     }
   },
   "angularCompilerOptions": {
