@@ -1,0 +1,26 @@
+<div class="container-fluid m-0 p-0 vh-15">
+  <router-outlet>
+    <section class="d-flex flex-column">
+      <nav class="navbar navbar-expand-lg bg-dark px-5 text-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler text-light bg-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-dark d-block color-dark"></span>
+          </button>
+          <a class="navbar-brand text-light text-lowercase fs-3" routerLink="/"><span
+              class="text-primary text-uppercase fs-2 fw-bold">D</span>ream<span
+              class="text-primary text-uppercase fs-2 fw-bold">W</span>ork</a>
+          <div class="collapse navbar-collapse fs-5 ms-lg-5" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-uppercase">
+              <a class="nav-link active text-light me-lg-3" aria-current="page" routerLink="/">Home</a>
+              <a class="nav-link text-light me-lg-3" routerLink="/onas">O nas</a>
+              <a class="nav-link text-light me-lg-3" routerLink="/pracownik">pracownicy</a>
+              <a class="nav-link text-light" routerLink="/contact">kontakt</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </router-outlet>
+</div>
