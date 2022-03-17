@@ -23,16 +23,24 @@ export class OurTeamComponent {
       text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
       position: 'Kierownik ds. Obsługi Klienta',
       alt: 'Zdjęcie Agnieszki Woźniak',
+      department: {
+        name: 'Agnieszka',
+        employeeCount: 1,
+      },
     },
     {
       id: '2',
       name: 'Karol Balicki',
       imageUrl:
-        'https://cdn.pixabay.com/photo/2019/12/17/17/09/woman-4702060_960_720.jpg',
+        'https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419_960_720.jpg',
       routerLink: '/pracownik/karolbalicki',
       text: 'This card has supporting text below as a natural lead-in to additional content.',
       position: 'Kierownik Działu Kadr',
       alt: 'Zdjęcie Karola Balickiego',
+      department: {
+        name: 'Karol',
+        employeeCount: 2,
+      },
     },
     {
       id: '3',
@@ -43,6 +51,10 @@ export class OurTeamComponent {
       text: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
       position: 'Administrator Bazy Danych',
       alt: 'Zdjęcie Joanny Zawady',
+      department: {
+        name: 'Joanna',
+        employeeCount: 3,
+      },
     },
   ]);
 }
