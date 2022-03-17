@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "first-project-5bc8d": {
+      "hosting": {
+        "todo-training": [
+          "first-project-5bc8d"
+        ]
+      }
+    }
+  }
+}
