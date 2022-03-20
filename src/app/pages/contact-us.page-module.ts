@@ -13,7 +13,7 @@ import { ContactFormComponentModule } from '@messages';
         component: ContactUsPage,
       },
     ]),
-    ContactFormComponentModule
+    ContactFormComponentModule,
   ],
   declarations: [ContactUsPage],
   providers: [],
