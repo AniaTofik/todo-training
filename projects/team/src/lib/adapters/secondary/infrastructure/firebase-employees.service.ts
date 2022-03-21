@@ -8,7 +8,9 @@ import { filterByCriterion } from '@lowgular/shared';
 import { AddsEmployeeDtoPort } from '../../../application/ports/secondary/adds-employee.dto-port';
 
 @Injectable()
-export class FirebaseEmployeesService implements GetsAllEmployeeDtoPort, AddsEmployeeDtoPort {
+export class FirebaseEmployeesService
+  implements GetsAllEmployeeDtoPort, AddsEmployeeDtoPort
+{
   constructor(private _client: AngularFirestore) {}
 
   getAll(criterion: Partial<EmployeeDTO>): Observable<EmployeeDTO[]> {

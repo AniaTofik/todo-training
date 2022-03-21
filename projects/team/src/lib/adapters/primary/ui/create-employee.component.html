@@ -1,0 +1,15 @@
+<!-- <form [formGroup]="createEmployee"><input type="text" formControlName="name" placeholder="Name"><input type="text"
+    formControlName="imageUrl" placeholder="Image Url"><input type="text" formControlName="routerLink"
+    placeholder="Router Link"><input type="text" formControlName="position" placeholder="Position"><input type="text"
+    formControlName="alt" placeholder="Alt"><input type="submit" value="Submit"></form> -->
+
+
+<form [formGroup]="createEmployee" (ngSubmit)="onCreateEmployeeSubmited(createEmployee)">
+  <input type="text" formControlName="name" placeholder="Name">
+  <input type="text" formControlName="position" placeholder="Position">
+  <input type="text" formControlName=" alt" placeholder=" Alt">
+  <input type="text" formControlName=" routerLink" placeholder=" Router Link">
+  <input type="text" formControlName=" text" placeholder=" Text">
+  <input type="text" formControlName=" imageUrl" placeholder=" Image Url">
+  <input type="submit" value="Submit">
+</form>
