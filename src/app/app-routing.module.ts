@@ -29,7 +29,7 @@ const routes: Routes = [
     loadChildren: () => ContactUsPageModule,
   },
   {
-    path: 'admin',
+    path: ':admin',
     loadChildren: () => AdminPageModule,
   },
 ];

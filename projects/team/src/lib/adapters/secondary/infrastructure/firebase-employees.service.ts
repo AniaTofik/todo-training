@@ -21,6 +21,6 @@ export class FirebaseEmployeesService
   }
 
   add(employee: Partial<EmployeeDTO>): void {
-    this._client.collection('employees').add(employee);
+    this._client.collection('employees-list').add(employee);
   }
 }

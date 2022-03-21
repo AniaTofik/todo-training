@@ -22,6 +22,7 @@ export class CreateEmployeeComponent {
     imageUrl: new FormControl(),
     routerLink: new FormControl(),
     position: new FormControl(),
+    text: new FormControl(),
     alt: new FormControl(),
   });
 
@@ -30,12 +31,17 @@ export class CreateEmployeeComponent {
   ) {}
 
   onCreateEmployeeSubmited(createEmployee: FormGroup): void {
+    if (createEmployee.invalid) {
+      return;
+    }
     this._addsEmployeeDto.add({
       name: createEmployee.get('name').value,
       imageUrl: createEmployee.get('imageUrl').value,
       routerLink: createEmployee.get('routerLink').value,
       position: createEmployee.get('position').value,
+      text: createEmployee.get('text').value,
       alt: createEmployee.get('alt').value,
     });
+    this.createEmployee.reset();
   }
 }
