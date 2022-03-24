@@ -7,8 +7,8 @@
       <div class="card-body text-center pt-4">
         <h5 class="text-uppercase">{{item.name}}</h5>
         <h6 class="card-title fw-bold">{{item.position}}</h6>
-        <!-- <p class="card-title fw-bold">{{item.department.name}}</p>
-        <p class="card-title fw-bold">{{item.department.employeeCount}}</p> -->
+        <p class="card-title fw-bold">Department: {{item.department?.name}}</p>
+        <p class="card-title fw-bold">Employee Count: {{item.department?.employeeCount}}</p>
         <p class="card-text text-start">{{item.text}}</p>
       </div>
     </div>

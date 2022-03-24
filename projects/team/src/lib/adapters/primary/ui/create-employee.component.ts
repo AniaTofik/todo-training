@@ -24,6 +24,8 @@ export class CreateEmployeeComponent {
     position: new FormControl(),
     text: new FormControl(),
     alt: new FormControl(),
+    departmentName: new FormControl(),
+    employeeCount: new FormControl(),
   });
 
   constructor(
@@ -31,6 +33,7 @@ export class CreateEmployeeComponent {
   ) {}
 
   onCreateEmployeeSubmited(createEmployee: FormGroup): void {
+    console.log(createEmployee.getRawValue());
     if (createEmployee.invalid) {
       return;
     }
@@ -41,6 +44,11 @@ export class CreateEmployeeComponent {
       position: createEmployee.get('position').value,
       text: createEmployee.get('text').value,
       alt: createEmployee.get('alt').value,
+
+      department: {
+        name: createEmployee.get('departmentName').value,
+        employeeCount: createEmployee.get('departmentName').value,
+      },
     });
     this.createEmployee.reset();
   }

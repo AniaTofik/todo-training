@@ -7,5 +7,5 @@ export interface EmployeeDTO {
   readonly routerLink: string;
   readonly position: string;
   readonly alt: string;
-  readonly department?: DepartmentDTO;
+  readonly department: DepartmentDTO;
 }
