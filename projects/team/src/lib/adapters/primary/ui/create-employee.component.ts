@@ -44,7 +44,6 @@ export class CreateEmployeeComponent {
       position: createEmployee.get('position').value,
       text: createEmployee.get('text').value,
       alt: createEmployee.get('alt').value,
-
       department: {
         name: createEmployee.get('departmentName').value,
         employeeCount: createEmployee.get('departmentName').value,
