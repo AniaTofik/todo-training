@@ -6,10 +6,11 @@ import { GetsAllEmployeeDtoPort } from '../../../application/ports/secondary/get
 import { EmployeeDTO } from '../../../application/ports/secondary/employee.dto';
 import { filterByCriterion } from '@lowgular/shared';
 import { AddsEmployeeDtoPort } from '../../../application/ports/secondary/adds-employee.dto-port';
+import { GetsOneEmployeeDtoPort } from '../../../application/ports/secondary/gets-one-employee.dto-port';
 
 @Injectable()
 export class FirebaseEmployeesService
-  implements GetsAllEmployeeDtoPort, AddsEmployeeDtoPort
+  implements GetsAllEmployeeDtoPort, AddsEmployeeDtoPort, GetsOneEmployeeDtoPort
 {
   constructor(private _client: AngularFirestore) {}
 
@@ -22,5 +23,9 @@ export class FirebaseEmployeesService
 
   add(employee: Partial<EmployeeDTO>): void {
     this._client.collection('employees-list').add(employee);
+  }
+
+  getOne(id: string): Observable<EmployeeDTO> {
+    return this._client.doc<EmployeeDTO>('employees/'+id).valueChanges({idField: 'id'});
   }
 }
