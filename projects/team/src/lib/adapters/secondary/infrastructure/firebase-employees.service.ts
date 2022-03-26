@@ -10,7 +10,10 @@ import { GetsOneEmployeeDtoPort } from '../../../application/ports/secondary/get
 
 @Injectable()
 export class FirebaseEmployeesService
-  implements GetsAllEmployeeDtoPort, AddsEmployeeDtoPort, GetsOneEmployeeDtoPort
+  implements
+    GetsAllEmployeeDtoPort,
+    AddsEmployeeDtoPort,
+    GetsOneEmployeeDtoPort
 {
   constructor(private _client: AngularFirestore) {}
 
@@ -26,6 +29,8 @@ export class FirebaseEmployeesService
   }
 
   getOne(id: string): Observable<EmployeeDTO> {
-    return this._client.doc<EmployeeDTO>('employees/'+id).valueChanges({idField: 'id'});
+    return this._client
+      .doc<EmployeeDTO>('employees-list/' + id)
+      .valueChanges({ idField: 'id' });
   }
 }

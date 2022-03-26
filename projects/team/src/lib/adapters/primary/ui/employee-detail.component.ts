@@ -1,9 +1,16 @@
+import { ActivatedRoute } from '@angular/router';
 import {
   Component,
   ViewEncapsulation,
   ChangeDetectionStrategy,
+  Inject,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { EmployeeDTO } from '../../../application/ports/secondary/employee.dto';
+import {
+  GETS_ONE_EMPLOYEE_DTO,
+  GetsOneEmployeeDtoPort,
+} from '../../../application/ports/secondary/gets-one-employee.dto-port';
 
 @Component({
   selector: 'lib-employee-detail',
@@ -12,6 +19,13 @@ import { ActivatedRoute } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeDetailComponent {
-  name$ = this.url.params;
-  constructor(private url: ActivatedRoute) {}
+  employee$: Observable<EmployeeDTO> = this._getsOneEmployeeDto.getOne(
+    this._activatedRoute.snapshot.params.employeeId
+  );
+
+  constructor(
+    private _activatedRoute: ActivatedRoute,
+    @Inject(GETS_ONE_EMPLOYEE_DTO)
+    private _getsOneEmployeeDto: GetsOneEmployeeDtoPort
+  ) {}
 }
