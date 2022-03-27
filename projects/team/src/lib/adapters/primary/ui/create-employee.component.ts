@@ -40,10 +40,8 @@ export class CreateEmployeeComponent {
     this._addsEmployeeDto.add({
       name: createEmployee.get('name').value,
       imageUrl: createEmployee.get('imageUrl').value,
-      routerLink: createEmployee.get('routerLink').value,
       position: createEmployee.get('position').value,
       text: createEmployee.get('text').value,
-      alt: createEmployee.get('alt').value,
       department: {
         name: createEmployee.get('departmentName').value,
         employeeCount: createEmployee.get('departmentName').value,

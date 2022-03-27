@@ -1,15 +1,15 @@
 <div class="container px-sm-0 px-lg-3">
   <div class="row card-group m-0 mb-5">
-    <div *ngFor="let item of employeesList$ | async"
-      class="card me-md-4 me-lg-5 bg-dark p-3 mt-4 mt-sm-5 mb-4 mb-sm-2 m-sm-2"
-      style="--bs-bg-opacity: .2; min-width: 15rem;" [routerLink]="'/pracownik/' +item.id">
-      <img [src]="item.imageUrl" class="card-img-top" [alt]="item.alt">
+    <div *ngFor="let employee of employeesList$ | async"
+      class="card me-md-4 me-lg-5 bg-dark p-3 mt-4 mb-4 mb-sm-2 m-sm-2" style="--bs-bg-opacity: .2; min-width: 25rem;"
+      [routerLink]="'/pracownik/' +employee.id">
+      <img [src]="employee.imageUrl" class="card-img-top" [alt]="employee.name">
       <div class="card-body text-center pt-4">
-        <h5 class="text-uppercase">{{item.name}}</h5>
-        <h6 class="card-title fw-bold">{{item.position}}</h6>
-        <p class="card-title fw-bold">Department: {{item.department?.name}}</p>
-        <p class="card-title fw-bold">Employee Count: {{item.department?.employeeCount}}</p>
-        <p class="card-text text-start">{{item.text}}</p>
+        <h5 class="text-uppercase">{{employee.name}}</h5>
+        <h6 class="card-title fw-bold">{{employee.position}}</h6>
+        <!-- <p class="card-title fw-bold">Department: {{employee.department?.name}}</p>
+        <p class="card-title fw-bold">Employee Count: {{employee.department?.employeeCount}}</p> -->
+        <p class="card-text text-start">{{employee.text}}</p>
       </div>
     </div>
   </div>
