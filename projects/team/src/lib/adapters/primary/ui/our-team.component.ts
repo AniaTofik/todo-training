@@ -11,10 +11,7 @@ import {
   GetsAllEmployeeDtoPort,
 } from '../../../application/ports/secondary/gets-all-employee.dto-port';
 import { map } from 'rxjs/operators';
-import {
-  CONTEXT_DTO_STORAGE,
-  ContextDtoStoragePort,
-} from '../../../application/ports/secondary/context-dto.storage-port';
+
 
 @Component({
   selector: 'lib-our-team',
@@ -29,8 +26,6 @@ export class OurTeamComponent {
   constructor(
     @Inject(GETS_ALL_EMPLOYEE_DTO)
     private _getsAllEmployeeDto: GetsAllEmployeeDtoPort,
-    @Inject(CONTEXT_DTO_STORAGE)
-    private _contextDtoStorage: ContextDtoStoragePort
   ) {}
 
   onEmloyeeClicked(employee: EmployeeDTO): void {
