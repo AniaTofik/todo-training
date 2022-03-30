@@ -27,8 +27,4 @@ export class OurTeamComponent {
     @Inject(GETS_ALL_EMPLOYEE_DTO)
     private _getsAllEmployeeDto: GetsAllEmployeeDtoPort,
   ) {}
-
-  onEmloyeeClicked(employee: EmployeeDTO): void {
-    this._contextDtoStorage.next({ employeeId: employee.id });
-  }
 }
